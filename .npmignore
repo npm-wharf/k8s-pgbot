@@ -1,0 +1,8 @@
+spec/
+coverage/
+.nyc_output/
+example/
+.dockerignore
+Dockerfile
+.travis.yml
+.editorconfig

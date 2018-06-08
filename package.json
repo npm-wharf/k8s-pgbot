@@ -1,0 +1,62 @@
+{
+  "name": "@npm-wharf/k8s-pgbot",
+  "version": "1.0.0",
+  "description": "a CLI tool to help automate postgres admin tasks in Kubernetes via jobs",
+  "main": "./src/index",
+  "bin": {
+    "pgbot": "./bin/pgbot.js"
+  },
+  "scripts": {
+    "release": "standard-version",
+    "pretest": "standard",
+    "test": "mocha spec/*.spec.js",
+    "coverage": "nyc npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/npm-wharf/k8s-pgbot.git"
+  },
+  "keywords": [
+    "postgres",
+    "Kubernetes"
+  ],
+  "author": "Alex Robson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/npm-wharf/k8s-pgbot/issues"
+  },
+  "homepage": "https://github.com/npm-wharf/k8s-pgbot#readme",
+  "dependencies": {
+    "@npm-wharf/cloud-archive": "1.0.X",
+    "axios": "^0.18.0",
+    "bluebird": "^3.5.1",
+    "bole": "^3.0.2",
+    "chalk": "^2.3.0",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.6.2",
+    "shell-quote": "^1.6.1",
+    "yargs": "^10.0.3"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "coveralls": "^3.0.0",
+    "mocha": "^4.0.1",
+    "nock": "^9.1.4",
+    "nyc": "^11.4.1",
+    "sinon": "^4.1.2",
+    "sinon-chai": "^2.14.0",
+    "standard": "^10.0.3",
+    "standard-version": "^4.2.0"
+  },
+  "standard": {
+    "env": [
+      "mocha"
+    ],
+    "global": [
+      "nock",
+      "sinon",
+      "expect"
+    ]
+  }
+}
